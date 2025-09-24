@@ -5,6 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  clsx:
+    specifier: ^2.1.1
+    version: 2.1.1
+  react:
+    specifier: ^19.0.0
+    version: 19.0.0
+  react-dom:
+    specifier: ^19.0.0
+    version: 19.0.0(react@19.0.0)
   rspress:
     specifier: ^1.40.2
     version: 1.43.4(webpack@5.98.0)
@@ -18,10 +27,16 @@ devDependencies:
     version: 9.22.0
   '@rspress/plugin-preview':
     specifier: ^1.43.4
-    version: 1.43.4(@babel/core@7.26.10)(@rspress/core@1.43.4)(react-router-dom@6.30.0)(react@18.3.1)(solid-js@1.9.5)
+    version: 1.43.4(@babel/core@7.26.10)(@rspress/core@1.43.4)(react-router-dom@6.30.0)(react@19.0.0)(solid-js@1.9.5)
   '@types/node':
     specifier: ^18.11.17
     version: 18.19.80
+  '@types/react':
+    specifier: ^19.0.10
+    version: 19.0.10
+  '@types/react-dom':
+    specifier: ^19.0.4
+    version: 19.0.4(@types/react@19.0.10)
   eslint:
     specifier: ^9.19.0
     version: 9.22.0
@@ -1072,7 +1087,7 @@ packages:
       '@rspress/runtime': 1.43.4
       medium-zoom: 1.1.0
 
-  /@rspress/plugin-preview@1.43.4(@babel/core@7.26.10)(@rspress/core@1.43.4)(react-router-dom@6.30.0)(react@18.3.1)(solid-js@1.9.5):
+  /@rspress/plugin-preview@1.43.4(@babel/core@7.26.10)(@rspress/core@1.43.4)(react-router-dom@6.30.0)(react@19.0.0)(solid-js@1.9.5):
     resolution: {integrity: sha512-cDSYRKPUG2tgWSRel2kyxlwkZzzgkMYiUKJSqu/nITlxFmeihc3NWqiCkgQmXc+NWMJnGVf4OT3nUxYJFs8KuA==}
     engines: {node: '>=14.17.6'}
     peerDependencies:
@@ -1090,9 +1105,9 @@ packages:
       '@rspress/shared': 1.43.4
       '@rspress/theme-default': 1.43.4
       lodash: 4.17.21
-      qrcode.react: 3.2.0(react@18.3.1)
-      react: 18.3.1
-      react-router-dom: 6.30.0(react-dom@18.3.1)(react@18.3.1)
+      qrcode.react: 3.2.0(react@19.0.0)
+      react: 19.0.0
+      react-router-dom: 6.30.0(react-dom@19.0.0)(react@19.0.0)
     transitivePeerDependencies:
       - '@babel/core'
       - '@rspack/tracing'
@@ -1241,6 +1256,14 @@ packages:
     resolution: {integrity: sha512-kEWeMwMeIvxYkeg1gTc01awpwLbfMRZXdIhwRcakd/KlK53jmRC26LqcbIt7fnAQTu5GzlnWmzA3H6+l1u6xxQ==}
     dependencies:
       undici-types: 5.26.5
+
+  /@types/react-dom@19.0.4(@types/react@19.0.10):
+    resolution: {integrity: sha512-4fSQ8vWFkg+TGhePfUzVmat3eC14TXYSsiiDSLI0dVLsrm9gZFABjPy/Qu6TKgl1tq1Bu1yDsuQgY3A3DOjCcg==}
+    peerDependencies:
+      '@types/react': ^19.0.0
+    dependencies:
+      '@types/react': 19.0.10
+    dev: true
 
   /@types/react@19.0.10:
     resolution: {integrity: sha512-JuRQ9KXLEjaUNjTWpzuR231Z2WpIwczOkBEIvbHNCzQefFIT0L8IqE6NV6ULLyC1SI/i234JnDoMkfg+RjQj2g==}
@@ -1683,6 +1706,11 @@ packages:
   /chrome-trace-event@1.0.4:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
     engines: {node: '>=6.0'}
+
+  /clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
+    engines: {node: '>=6'}
+    dev: false
 
   /color-convert@2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
@@ -3272,12 +3300,12 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /qrcode.react@3.2.0(react@18.3.1):
+  /qrcode.react@3.2.0(react@19.0.0):
     resolution: {integrity: sha512-YietHHltOHA4+l5na1srdaMx4sVSOjV9tamHs+mwiLWAMr6QVACRUw1Neax5CptFILcNoITctJY0Ipyn5enQ8g==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      react: 18.3.1
+      react: 19.0.0
     dev: true
 
   /queue-microtask@1.2.3:
@@ -3297,6 +3325,14 @@ packages:
       loose-envify: 1.4.0
       react: 18.3.1
       scheduler: 0.23.2
+
+  /react-dom@19.0.0(react@19.0.0):
+    resolution: {integrity: sha512-4GV5sHFG0e/0AD4X+ySy6UJd3jVl1iNsNHdpad0qhABJ11twS3TTBnseqsKurKcsNqCEFeGL3uLpVChpIO3QfQ==}
+    peerDependencies:
+      react: ^19.0.0
+    dependencies:
+      react: 19.0.0
+      scheduler: 0.25.0
 
   /react-fast-compare@3.2.2:
     resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
@@ -3337,6 +3373,19 @@ packages:
       react-dom: 18.3.1(react@18.3.1)
       react-router: 6.30.0(react@18.3.1)
 
+  /react-router-dom@6.30.0(react-dom@19.0.0)(react@19.0.0):
+    resolution: {integrity: sha512-x30B78HV5tFk8ex0ITwzC9TTZMua4jGyA9IUlH1JLQYQTFyxr/ZxwOJq7evg1JX1qGVUcvhsmQSKdPncQrjTgA==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.23.0
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+      react-router: 6.30.0(react@19.0.0)
+    dev: true
+
   /react-router@6.30.0(react@18.3.1):
     resolution: {integrity: sha512-D3X8FyH9nBcTSHGdEKurK7r8OYE1kKFn3d/CF+CoxbSHkxU7o37+Uh7eAHRXr6k2tSExXYO++07PeXJtA/dEhQ==}
     engines: {node: '>=14.0.0'}
@@ -3345,6 +3394,16 @@ packages:
     dependencies:
       '@remix-run/router': 1.23.0
       react: 18.3.1
+
+  /react-router@6.30.0(react@19.0.0):
+    resolution: {integrity: sha512-D3X8FyH9nBcTSHGdEKurK7r8OYE1kKFn3d/CF+CoxbSHkxU7o37+Uh7eAHRXr6k2tSExXYO++07PeXJtA/dEhQ==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.23.0
+      react: 19.0.0
+    dev: true
 
   /react-syntax-highlighter@15.6.1(react@18.3.1):
     resolution: {integrity: sha512-OqJ2/vL7lEeV5zTJyG7kmARppUjiB9h9udl4qHQjjgEos66z00Ia0OckwYfRxCSFrW8RJIBnsBwQsHZbVPspqg==}
@@ -3364,6 +3423,10 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+
+  /react@19.0.0:
+    resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==}
+    engines: {node: '>=0.10.0'}
 
   /readdirp@3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
@@ -3701,6 +3764,9 @@ packages:
     resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
     dependencies:
       loose-envify: 1.4.0
+
+  /scheduler@0.25.0:
+    resolution: {integrity: sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==}
 
   /schema-utils@4.3.0:
     resolution: {integrity: sha512-Gf9qqc58SpCA/xdziiHz35F4GNIWYWZrEshUc/G/r5BnLph6xpKuLeoJoQuj5WfBIx/eQLf+hmVPYHaxJu7V2g==}

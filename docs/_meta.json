@@ -1,13 +1,13 @@
 [
   {
-    "text": "Guide",
-    "link": "/guide/",
-    "activeMatch": "/guide/"
+    "text": "组件",
+    "link": "/components/scroll-spy/",
+    "activeMatch": "/components/"
   },
   {
-    "text": "Hello world",
-    "link": "/hello/",
-    "activeMatch": "/hello/"
+    "text": "解决方案",
+    "link": "/solutions/tech-selection/store",
+    "activeMatch": "/solutions/"
   },
   {
     "text": "API",
