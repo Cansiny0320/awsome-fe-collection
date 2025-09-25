@@ -10,6 +10,7 @@ export default defineConfig({
     light: '/rspress-light-logo.png',
     dark: '/rspress-dark-logo.png',
   },
+  base: '/awsome-fe-collection/',
   themeConfig: {
     socialLinks: [
       {
